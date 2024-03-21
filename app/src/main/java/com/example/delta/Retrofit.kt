@@ -5,7 +5,7 @@ import retrofit2.Retrofit
 
 class Retrofit {
     val retrofit = Retrofit.Builder()
-        .baseUrl("https://f29a0be2e-37d8-4559-a1be-38d72e7ed7f1-00-2p3c7fi3ajv8b.picard.replit.dev/")
+        .baseUrl("https://80f937eb-5579-48c7-ab02-528b0a91c0b3-00-2w3b8ix9w0kuu.spock.replit.dev/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 

@@ -42,25 +42,25 @@ class MainActivity : AppCompatActivity() {
 
         // Configuração do Retrofit
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://4af01f27-21ff-4a35-8f58-48517ff0c74c-00-2ohswx0v4qr6t.kirk.replit.dev/")
+            .baseUrl("https://80f937eb-5579-48c7-ab02-528b0a91c0b3-00-2w3b8ix9w0kuu.spock.replit.dev/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()
 
         val apiService = retrofit.create(ApiService::class.java)
 
-        apiService.getProdutos().enqueue(object : Callback<List<Produto>> {
-            override fun onResponse(call: Call<List<Produto>>, response: Response<List<Produto>>) {
+        apiService.getProdutos().enqueue(object : Callback<List<produto>> {
+            override fun onResponse(call: Call<List<produto>>, response: Response<List<produto>>) {
                 if (response.isSuccessful) {
                     val produtos = response.body() ?: emptyList()
-                    adapter = CustomAdapter(Produto)
+                    adapter = CustomAdapter(produtos)
                     recyclerView.adapter = adapter
                 } else {
                     Log.e("API Error", "Response not successful. Code: ${response.code()}")
                 }
             }
 
-            override fun onFailure(call: Call<List<Produto>>, t: Throwable) {
+            override fun onFailure(call: Call<List<produto>>, t: Throwable) {
                 Log.e("API Failure", "Error fetching products", t)
             }
         })
