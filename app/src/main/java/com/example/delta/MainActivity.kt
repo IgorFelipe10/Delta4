@@ -49,18 +49,18 @@ class MainActivity : AppCompatActivity() {
 
         val apiService = retrofit.create(ApiService::class.java)
 
-        apiService.getProdutos().enqueue(object : Callback<List<produto>> {
-            override fun onResponse(call: Call<List<produto>>, response: Response<List<produto>>) {
+        apiService.getProdutos().enqueue(object : Callback<List<Produto>> {
+            override fun onResponse(call: Call<List<Produto>>, response: Response<List<Produto>>) {
                 if (response.isSuccessful) {
-                    val produtos = response.body() ?: emptyList()
-                    adapter = CustomAdapter(produtos)
+                    val Produtos = response.body() ?: emptyList()
+                    adapter = CustomAdapter(Produtos)
                     recyclerView.adapter = adapter
                 } else {
                     Log.e("API Error", "Response not successful. Code: ${response.code()}")
                 }
             }
 
-            override fun onFailure(call: Call<List<produto>>, t: Throwable) {
+            override fun onFailure(call: Call<List<Produto>>, t: Throwable) {
                 Log.e("API Failure", "Error fetching products", t)
             }
         })
