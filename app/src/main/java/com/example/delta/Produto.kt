@@ -1,7 +1,7 @@
 package com.example.delta
 
 
-data class produto(
+data class Produto(
     val PRODUTO_ID: Int,
     val PRODUTO_NOME: String,
     val PRODUTO_DESC: String,
