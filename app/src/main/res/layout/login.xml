@@ -25,8 +25,10 @@
             android:ems="10"
             android:inputType="text"
             android:text="E-mail"
-            tools:layout_editor_absoluteX="85dp"
-            tools:layout_editor_absoluteY="191dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
@@ -34,8 +36,11 @@
             android:layout_height="50dp"
             android:ems="10"
             android:inputType="textPassword"
-            tools:layout_editor_absoluteX="85dp"
-            tools:layout_editor_absoluteY="258dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.633" />
 
         <Button
             android:id="@+id/button2"
