@@ -5,6 +5,8 @@ import retrofit2.http.GET
 
 interface ApiService {
     @GET("/")
-    fun getProdutos(): Call<List<produto>>
+    fun getProdutos(): Call<List<Produto>>
 
+    @GET("/")
+    fun getUsuario(): Call<Usuario>
 }
