@@ -1,12 +1,15 @@
 package com.example.delta
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.delta.Produto
+import com.example.delta.R
 
-class CustomAdapter(private val dataSet: List<produto>) :
+class CustomAdapter(private val dataSet: List<Produto>) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
